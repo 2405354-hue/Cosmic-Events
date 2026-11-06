@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gather – campus events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gather_campus_events.css">
+</head>
+<body>
+<header class="nav">
+  <nav class="nav-island" aria-label="Main navigation">
+    <div class="nav-links"><a href="#home">Home</a><a href="#c-all">All events</a></div>
+    <span class="nav-divider" aria-hidden="true"></span>
+    <div class="nav-actions">
+      <button id="theme" class="ibtn" aria-label="Toggle theme">◐</button>
+      <button id="auth" class="btn sm nav-auth">Log in</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<div id="land">
+  <section class="hero" id="top">
+    <div class="hero-in">
+      <h1>Delightful campus events <span>start here</span></h1>
+      <p>Find what is happening at ITER this week, pick a spot, and register in under a minute.</p>
+      <a class="btn" href="#cats">Explore categories</a>
+    </div>
+  </section>
+  <section class="pad" id="cats">
+    <h2>Browse by category</h2>
+    <p class="sub">Open a category to see its events.</p>
+    <div class="grid" id="catGrid"></div>
+  </section>
+  <section class="story pad" aria-labelledby="storyTitle">
+    <div class="story-head">
+      <p class="story-kicker">More than something to do</p>
+      <h2 id="storyTitle">The moments that bring us closer</h2>
+      <p class="sub">A campus event can be the start of a story you share long after it ends.</p>
+    </div>
+    <div class="story-list">
+      <article class="story-card" data-reveal>
+        <div class="story-art story-art-one" aria-hidden="true"><span>01</span><i>✦</i><b>together</b></div>
+        <div class="story-copy">
+          <p class="story-kicker">A place to belong</p>
+          <h3>Some of your favorite people start as strangers.</h3>
+          <p>Show up for the music, the match, or the meal. Leave with new friends who make campus feel a little more like home.</p>
+        </div>
+      </article>
+      <article class="story-card" data-reveal>
+        <div class="story-art story-art-two" aria-hidden="true"><span>02</span><i>♡</i><b>remember</b></div>
+        <div class="story-copy">
+          <p class="story-kicker">A memory in the making</p>
+          <h3>The best stories are rarely planned.</h3>
+          <p>It might be one last song, a team celebrating a win, or a conversation that runs late. Small moments have a way of staying with us.</p>
+        </div>
+      </article>
+      <article class="story-card" data-reveal>
+        <div class="story-art story-art-three" aria-hidden="true"><span>03</span><i>↗</i><b>make it happen</b></div>
+        <div class="story-copy">
+          <p class="story-kicker">Your idea can bring us together</p>
+          <h3>Start with an idea. Gather your people.</h3>
+          <p>Host a workshop, share a skill, or bring a new tradition to life. Gather helps make it easier for your campus community to find you.</p>
+        </div>
+      </article>
+    </div>
+    <div class="story-cta"><a class="btn alt" href="#cats">Find your next moment</a></div>
+  </section>
+</div>
+
+<section class="pad" id="evw" hidden>
+  <a class="back" href="#home">← All categories</a>
+  <div class="bar"><h2 id="evTitle">All events</h2><input id="q" type="search" placeholder="Search by name or venue" aria-label="Search events"></div>
+  <div class="chips" id="catChips"></div>
+  <div class="chips" id="stChips"></div>
+  <div id="trend"></div>
+  <div id="list"></div>
+</section>
+</main>
+<footer class="site-footer">
+  <canvas class="light-matrix" aria-hidden="true"></canvas>
+  <div class="footer-main">
+    <p class="story-kicker">Made for moments worth celebrating</p>
+    <h2>Your next campus memory starts here.</h2>
+  </div>
+  <div class="footer-bottom">
+    <a class="footer-brand" href="#home">Gather</a>
+    <nav class="footer-socials" aria-label="Social and contact links">
+      <a href="https://instagram.com/your-handle" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:you@example.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="ov cardov" id="ovCard" role="dialog" aria-modal="true" aria-label="Event card">
+  <div class="evcard-modal" id="cardModal"></div>
+</div>
+<div class="ov" id="ovBox" role="dialog" aria-modal="true"><div class="sheet" id="box"></div></div>
+<div id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/motion@14.9.1/dist/motion.js"></script>
+<script src="gather_campus_events.js"></script>
+</body>
+</html>
